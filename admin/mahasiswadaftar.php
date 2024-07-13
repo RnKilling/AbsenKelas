@@ -1,5 +1,5 @@
 <h3>Data Pegawai</h3>
-<a href="index.php?halaman=pegawaitambah" class="btn btn-primary">Tambah Pegawai</a>
+<a href="index.php?halaman=mahasiswatambah" class="btn btn-primary">Tambah Mahasiswa</a>
 <br>
 <br>
 <div class="row">

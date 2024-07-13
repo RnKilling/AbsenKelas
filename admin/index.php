@@ -107,7 +107,7 @@ function getBulan($bln)
                 <div id="pegawai" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="index.php?halaman=pegawaitambah">Tambah Pegawai</a>
-                        <a class="collapse-item" href="index.php?halaman=pegawaidaftar">Daftar Pegawai</a>
+                        <a class="collapse-item" href="index.php?halaman=mahasiswadaftar">Daftar Pegawai</a>
                     </div>
                 </div>
             </li>
@@ -122,6 +122,12 @@ function getBulan($bln)
                 <a class="nav-link collapsed text-white" href="index.php?halaman=laporan">
                     <i class="fa fa-fw fa-list text-white"></i>
                     <span>Laporan</span></a>
+            </li>
+            <hr class="sidebar-divider">
+            <li class="nav-item">
+                <a class="nav-link collapsed text-white" href="index.php?halaman=QRpegawai">
+                    <i class="fa fa-fw fa-list text-white"></i>
+                    <span>QR Pegawai</span></a>
             </li>
         </ul>
         <div id="content-wrapper" class="d-flex flex-column">
@@ -153,8 +159,8 @@ function getBulan($bln)
                         if (isset($_GET['halaman'])) {
                             if ($_GET['halaman'] == "beranda") {
                                 include 'beranda.php';
-                            } elseif ($_GET['halaman'] == "pegawaidaftar") {
-                                include 'pegawaidaftar.php';
+                            } elseif ($_GET['halaman'] == "mahasiswadaftar") {
+                                include 'mahasiswadaftar.php';
                             } elseif ($_GET['halaman'] == "pegawaitambah") {
                                 include 'pegawaitambah.php';
                             } elseif ($_GET['halaman'] == "pegawaiedit") {
