@@ -4,7 +4,7 @@ if ($_SESSION['admin']['level'] != "Admin") {
     echo "<script> location ='index.php';</script>";
 }
 ?>
-<h3>Detail Pegawai</h3>
+<h3>Detail Mahasiswa</h3>
 <br>
 <?php
 $ambil = $koneksi->query("SELECT * FROM pengguna WHERE id='$_GET[id]'");
@@ -19,7 +19,7 @@ $row = $ambil->fetch_assoc();
                         <tbody>
                             <tr>
                                 <td width="15%">
-                                    NIP
+                                    NIM
                                 </td>
                                 <td width="5px">
                                     :
