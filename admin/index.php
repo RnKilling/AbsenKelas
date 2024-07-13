@@ -106,8 +106,8 @@ function getBulan($bln)
                 </a>
                 <div id="pegawai" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="index.php?halaman=pegawaitambah">Tambah Pegawai</a>
-                        <a class="collapse-item" href="index.php?halaman=mahasiswadaftar">Daftar Pegawai</a>
+                        <a class="collapse-item" href="index.php?halaman=mahasiswatambah">Tambah Mahasiswa</a>
+                        <a class="collapse-item" href="index.php?halaman=mahasiswadaftar">Daftar Mahasiswa  </a>
                     </div>
                 </div>
             </li>
@@ -161,8 +161,8 @@ function getBulan($bln)
                                 include 'beranda.php';
                             } elseif ($_GET['halaman'] == "mahasiswadaftar") {
                                 include 'mahasiswadaftar.php';
-                            } elseif ($_GET['halaman'] == "pegawaitambah") {
-                                include 'pegawaitambah.php';
+                            } elseif ($_GET['halaman'] == "mahasiswatambah") {
+                                include 'mahasiswatambah.php';
                             } elseif ($_GET['halaman'] == "pegawaiedit") {
                                 include 'pegawaiedit.php';
                             } elseif ($_GET['halaman'] == "pegawaidetail") {

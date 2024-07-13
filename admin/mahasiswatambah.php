@@ -9,11 +9,11 @@ if (!empty($_POST['level'])) {
     $level = "";
 }
 ?>
-<h3>Tambah Pegawai</h3>
+<h3>Tambah Mahasiswa</h3>
 <br>
 <form method="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label>NIP</label>
+        <label>NIM</label>
         <input type="number" class="form-control" value="<?php if (!empty($_POST['nip'])) echo $_POST['nip']; ?>" name="nip">
     </div>
     <div class="form-group">
@@ -25,11 +25,11 @@ if (!empty($_POST['level'])) {
         <input type="email" class="form-control" value="<?php if (!empty($_POST['email'])) echo $_POST['email']; ?>" name="email">
     </div>
     <div class="form-group">
-        <label>Jabatan</label>
+        <label>Tingkat</label>
         <select type="jabatan" class="form-control" name="jabatan">
-            <option value="Pegawai">Pegawai</option>
-            <option value="Teknisi">Teknisi</option>
-            <option value="HRD">HRD</option>
+            <option value="Pegawai">I</option>
+            <option value="Teknisi">II</option>
+            <option value="HRD">III</option>
         </select>
     </div>
     <div class="form-group">
@@ -42,9 +42,9 @@ if (!empty($_POST['level'])) {
     </div>
     <div class="form-group">
         <label>Alamat</label>
-        <textarea class="form-control" name="alamat" id="alamat" rows="10"><?php if (!empty($_POST['alamat'])) echo $_POST['alamat']; ?></textarea>
+        <textarea class="form-control" name="alamat" id="alamat" rows="5"><?php if (!empty($_POST['alamat'])) echo $_POST['alamat']; ?></textarea>
         <script>
-            CKEDITOR.replace('alamat');
+           
         </script>
     </div>
     <div class="form-group">
@@ -109,7 +109,7 @@ echo '<img src="' . $filename . '" />';
         echo "<img src='$tempDir$nip.png' alt='QR Code'>";
 
         echo "<script>alert('Pegawai Berhasil Di Simpan');</script>";
-        echo "<script>location='index.php?halaman=pegawaidaftar';</script>";
+        echo "<script>location='index.php?halaman=mahasiswadaftar';</script>";
     }
 }
 ?>

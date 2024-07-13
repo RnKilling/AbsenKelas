@@ -1,4 +1,4 @@
-<h3>Data Pegawai</h3>
+<h3>Data Mahasiswa</h3>
 <a href="index.php?halaman=mahasiswatambah" class="btn btn-primary">Tambah Mahasiswa</a>
 <br>
 <br>
