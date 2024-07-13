@@ -102,7 +102,7 @@ function getBulan($bln)
             <li class="nav-item">
                 <a class="nav-link collapsed text-white" href="#" data-toggle="collapse" data-target="#pegawai" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-users text-white"></i>
-                    <span>Pegawai</span>
+                    <span>Mahasiswa</span>
                 </a>
                 <div id="pegawai" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -127,7 +127,7 @@ function getBulan($bln)
             <li class="nav-item">
                 <a class="nav-link collapsed text-white" href="index.php?halaman=QRpegawai">
                     <i class="fa fa-fw fa-list text-white"></i>
-                    <span>QR Pegawai</span></a>
+                    <span>QR Mahasiswa</span></a>
             </li>
         </ul>
         <div id="content-wrapper" class="d-flex flex-column">
@@ -165,8 +165,8 @@ function getBulan($bln)
                                 include 'mahasiswatambah.php';
                             } elseif ($_GET['halaman'] == "pegawaiedit") {
                                 include 'pegawaiedit.php';
-                            } elseif ($_GET['halaman'] == "pegawaidetail") {
-                                include 'pegawaidetail.php';
+                            } elseif ($_GET['halaman'] == "mahasiswadetail") {
+                                include 'mahasiswadetail.php';
                             } elseif ($_GET['halaman'] == "pegawaihapus") {
                                 include 'pegawaihapus.php';
                             } elseif ($_GET['halaman'] == "logout") {
