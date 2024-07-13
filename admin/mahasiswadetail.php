@@ -120,6 +120,6 @@ if (isset($_POST['ubah'])) {
         $koneksi->query("UPDATE pengguna SET password='$password',nip='$_POST[nip]',nama='$_POST[nama]', email='$_POST[email]',jabatan='$_POST[jabatan]', telepon='$_POST[telepon]', alamat='$_POST[alamat]' WHERE id='$_GET[id]'") or die(mysqli_error($koneksi));
     }
     echo "<script>alert('Data Pegawai Berhasil Di Ubah');</script>";
-    echo "<script>location='index.php?halaman=pegawaidaftar';</script>";
+    echo "<script>location='index.php?halaman=mahasiswadaftar';</script>";
 }
 ?>
