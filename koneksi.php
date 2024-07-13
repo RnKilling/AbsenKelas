@@ -1,3 +1,4 @@
 <?php
-$koneksi = new mysqli("localhost:3307", "root", "", "eabsensekipqr");
+$koneksi = new mysqli("localhost", "root", "", "eabsensekipqr");
 date_default_timezone_set('Asia/Jakarta');
+?>
