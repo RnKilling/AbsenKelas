@@ -12,7 +12,7 @@ if (!empty($_POST['idpengguna'])) {
             <div class="form-group">
                 <input type="hidden" name="halaman" value="absensirekapcari">
                 <select name="idpengguna" class="form-control" required>
-                    <option value="">Pilih Pegawai</option>
+                    <option value="">Pilih Mahasiswa</option>
                     <?php
                     $ambilpegawai = $koneksi->query("SELECT * FROM pengguna where level='Pegawai'");
                     while ($pegawai = $ambilpegawai->fetch_assoc()) { ?>
