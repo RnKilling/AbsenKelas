@@ -63,7 +63,7 @@ function getBulan($bln)
 
 <head>
   <meta charset="utf-8">
-  <title>E - Absensi Kelurahan Sekip Kecamatan Medan Petisah</title>
+  <title>E - Absensi Kelas Politeknik Gajah Tunggal</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
