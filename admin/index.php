@@ -69,7 +69,7 @@ function getBulan($bln)
     <meta charset="utf-8" />
     <link rel="icon" type="image/x-icon" href="../foto/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin - E - Absensi Kelurahan Sekip Kecamatan Medan Petisah</title>
+    <title>Admin - E - Absensi Kelas Politeknik Gajah Tunggal</title>
     <link href="assets/css/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="assets/DataTables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
