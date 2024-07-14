@@ -14,7 +14,7 @@ include 'koneksi.php';
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-lg-7 pt-5">
-								<h1 class="display-4 text-white mb-3 animated slideInDown">Sistem Absensi Pegawai Kelurahan Sekip Kecamatan Medan Petisah Dengan QR Code</h1>
+								<h1 class="display-4 text-white mb-3 animated slideInDown">Sistem Absensi Kelas Dengan QR Code</h1>
 								<?php
 								include 'koneksi.php';
 								if (!isset($_SESSION["pegawai"])) { ?>
@@ -36,7 +36,7 @@ include 'koneksi.php';
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-lg-7 pt-5">
-								<h1 class="display-4 text-white mb-3 animated slideInDown">Kelurahan Sekip Kecamatan Medan Petisah</h1>
+								<h1 class="display-4 text-white mb-3 animated slideInDown">Absen Kelas</h1>
 								<?php
 								include 'koneksi.php';
 								if (!isset($_SESSION["pegawai"])) { ?>
