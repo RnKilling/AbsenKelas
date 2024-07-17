@@ -18,6 +18,7 @@
 								<th>Telepon</th>
 								<th>Level</th>
 								<th>Foto</th>
+								<th>QR Code</th>
 								<th>Aksi</th>
 							</tr>
 						</thead>
@@ -35,6 +36,9 @@
 									<td><?php echo $row['level'] ?></td>
 									<td>
 										<img src="../foto/<?php echo $row['fotoprofil'] ?>" style="border-radius:10%" width="150px">
+									</td>
+									<td>
+										<img src="QRpegawai.php<?php echo $row['fotoprofil'] ?>" style="border-radius:10%" width="150px">
 									</td>
 									<td>
 										<a href="index.php?halaman=mahasiswadetail&id=<?php echo $row['id']; ?>" class="btn btn-info m-1">Detail</a>
