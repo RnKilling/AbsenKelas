@@ -37,8 +37,8 @@ include 'koneksi.php';
 </div>
 <?php
 if (isset($_POST["simpan"])) {
-	$email = $_POST["email"];
-	$password = $_POST["password"];
+	$email = addslashes($_POST["email"]);
+	$password = addslashes($_POST["password"]);
 	$ambil = $koneksi->query("SELECT * FROM pengguna
 		WHERE email='$email' AND password='$password' limit 1");
 	$akunyangcocok = $ambil->num_rows;

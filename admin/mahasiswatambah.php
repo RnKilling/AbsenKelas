@@ -4,7 +4,7 @@ if ($_SESSION['admin']['level'] != "Admin") {
     echo "<script> location ='index.php';</script>";
 }
 if (!empty($_POST['level'])) {
-    $level = $_POST['level'];
+    $level = addslashes($_POST['level']);
 } else {
     $level = "";
 }
@@ -14,15 +14,15 @@ if (!empty($_POST['level'])) {
 <form method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label>NIM</label>
-        <input type="number" class="form-control" value="<?php if (!empty($_POST['nip'])) echo $_POST['nip']; ?>" name="nip">
+        <input type="number" class="form-control" value="<?php if (!empty($_POST['nip'])) echo htmlspecialchars($_POST['nip']); ?>" name="nip">
     </div>
     <div class="form-group">
         <label>Nama</label>
-        <input type="text" class="form-control" value="<?php if (!empty($_POST['nama'])) echo $_POST['nama']; ?>" name="nama">
+        <input type="text" class="form-control" value="<?php if (!empty($_POST['nama'])) echo htmlspecialchars($_POST['nama']); ?>" name="nama">
     </div>
     <div class="form-group">
         <label>Email</label>
-        <input type="email" class="form-control" value="<?php if (!empty($_POST['email'])) echo $_POST['email']; ?>" name="email">
+        <input type="email" class="form-control" value="<?php if (!empty($_POST['email'])) echo htmlspecialchars($_POST['email']); ?>" name="email">
     </div>
     <div class="form-group">
         <label>Tingkat</label>
@@ -34,18 +34,15 @@ if (!empty($_POST['level'])) {
     </div>
     <div class="form-group">
         <label>Telepon</label>
-        <input type="number" class="form-control" value="<?php if (!empty($_POST['telepon'])) echo $_POST['telepon']; ?>" name="telepon">
+        <input type="number" class="form-control" value="<?php if (!empty($_POST['telepon'])) echo htmlspecialchars($_POST['telepon']); ?>" name="telepon">
     </div>
     <div class="form-group">
         <label>Password</label>
-        <input type="text" class="form-control" value="<?php if (!empty($_POST['password'])) echo $_POST['password']; ?>" name="password">
+        <input type="text" class="form-control" value="<?php if (!empty($_POST['password'])) echo htmlspecialchars($_POST['password']); ?>" name="password">
     </div>
     <div class="form-group">
         <label>Alamat</label>
-        <textarea class="form-control" name="alamat" id="alamat" rows="5"><?php if (!empty($_POST['alamat'])) echo $_POST['alamat']; ?></textarea>
-        <script>
-           
-        </script>
+        <textarea class="form-control" name="alamat" id="alamat" rows="5"><?php if (!empty($_POST['alamat'])) echo htmlspecialchars($_POST['alamat']); ?></textarea>
     </div>
     <div class="form-group">
         <label>Foto</label>
@@ -59,26 +56,25 @@ if (!empty($_POST['level'])) {
 
 <?php
 if (isset($_POST['save'])) {
-    $password = $_POST["password"];
-    $ambil = $koneksi->query("SELECT * FROM pengguna WHERE email='$_POST[email]' LIMIT 1") or die(mysqli_error($koneksi));
+    $password = addslashes($_POST["password"]);
+    $email = addslashes($_POST['email']);
+    $ambil = $koneksi->query("SELECT * FROM pengguna WHERE email='$email' LIMIT 1") or die(mysqli_error($koneksi));
     $akunyangcocok = $ambil->num_rows;
     if ($akunyangcocok == 1) {
         echo "<script>alert('Email Sudah Terdaftar');</script>";
     } else {
-        $namafoto = empty($_FILES['foto']['name']) ? 'Untitled.png' : $_FILES['foto']['name'];
-        $lokasifoto = empty($_FILES['foto']['tmp_name']) ? '' : $_FILES['foto']['tmp_name'];
+        $namafoto = empty($_FILES['foto']['name']) ? 'Untitled.png' : addslashes($_FILES['foto']['name']);
+        $lokasifoto = empty($_FILES['foto']['tmp_name']) ? '' : addslashes($_FILES['foto']['tmp_name']);
         
         if (!empty($lokasifoto)) {
             move_uploaded_file($lokasifoto, "../foto/" . $namafoto);
         }
         
-        $nip = $_POST['nip'];
-        $nama = $_POST['nama'];
-        $email = $_POST['email'];
-        $jabatan = $_POST['jabatan'];
-        $telepon = $_POST['telepon'];
-        $password = $_POST['password'];
-        $alamat = $_POST['alamat'];
+        $nip = addslashes($_POST['nip']);
+        $nama = addslashes($_POST['nama']);
+        $jabatan = addslashes($_POST['jabatan']);
+        $telepon = addslashes($_POST['telepon']);
+        $alamat = addslashes($_POST['alamat']);
         
         // Insert into database
         $koneksi->query("INSERT INTO pengguna (nip, nama, email, jabatan, telepon, password, alamat, fotoprofil, level)
@@ -86,18 +82,14 @@ if (isset($_POST['save'])) {
 
         // Generate QR Code
         require('phpqrcode/qrlib.php'); 
-        $qrvalue = $_POST['nip'];
+        $qrvalue = addslashes($_POST['nip']);
+        $text = addslashes($_POST['nip']);     
+        $filename = $qrvalue . '.png';
 
+        QRcode::png($text, $filename);
+        echo '<img src="' . $filename . '" />';
 
-$text = $_POST['nip'];     
-$filename = $qrvalue . '.png';
-
-   QRcode::png($text, $filename);
-echo '<img src="' . $filename . '" />';
-
-       
- // Include library PHP QR Code
-
+        // Include library PHP QR Code
         // Directory where QR Code will be saved
         $tempDir = 'QRpegawai.php/';
 
