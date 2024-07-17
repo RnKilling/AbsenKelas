@@ -18,7 +18,7 @@
 								<th>Telepon</th>
 								<th>Level</th>
 								<th>Foto</th>
-								<th>QR Code</th>
+								<th>QR Code </th>
 								<th>Aksi</th>
 							</tr>
 						</thead>
@@ -38,9 +38,10 @@
 										<img src="../foto/<?php echo $row['fotoprofil'] ?>" style="border-radius:10%" width="150px">
 									</td>
 									<td>
-										<img src="QRpegawai.php<?php echo $row['fotoprofil'] ?>" style="border-radius:10%" width="150px">
-									</td>
-									<td>
+    								<img src="QRpegawai.php/<?php echo $row['nip']; ?>.png" width="100px"> <!-- Tambahkan kolom QR Code -->
+							</td>
+							<td>	
+
 										<a href="index.php?halaman=mahasiswadetail&id=<?php echo $row['id']; ?>" class="btn btn-info m-1">Detail</a>
 										<a href="index.php?halaman=pegawaiedit&id=<?php echo $row['id']; ?>" class="btn btn-warning m-1">Ubah</a>
 										<a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini ?');" href="index.php?halaman=pegawaihapus&id=<?php echo $row['id'] ?>" class="btn btn-danger m-1">Hapus</a>

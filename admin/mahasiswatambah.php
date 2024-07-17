@@ -99,7 +99,7 @@ echo '<img src="' . $filename . '" />';
  // Include library PHP QR Code
 
         // Directory where QR Code will be saved
-        $tempDir = 'pdfqrcodes/';
+        $tempDir = 'QRpegawai.php/';
 
         // Create QR Code instance
         QRcode::png($nip, $tempDir . $nip . '.png');
