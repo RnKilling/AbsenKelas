@@ -184,7 +184,7 @@ function bulan($bln)
                 <br><br><br><br><br>
                 Kepala Desa
                 <br>
-                Kecamatan Medan Petisah
+                POLITEKNIK GAJAH TUNGGAL
             </td>
         </tr>
     </table>
