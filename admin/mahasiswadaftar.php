@@ -55,8 +55,8 @@
                                     </td>
                                     <td>
                                         <a href="index.php?halaman=mahasiswadetail&id=<?php echo $row['id']; ?>" class="btn btn-info m-1">Detail</a>
-                                        <a href="index.php?halaman=pegawaiedit&id=<?php echo $row['id']; ?>" class="btn btn-warning m-1">Ubah</a>
-                                        <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini ?');" href="index.php?halaman=pegawaihapus&id=<?php echo $row['id'] ?>" class="btn btn-danger m-1">Hapus</a>
+                                        <a href="index.php?halaman=mahasiswaedit&id=<?php echo $row['id']; ?>" class="btn btn-warning m-1">Ubah</a>
+                                        <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini ?');" href="index.php?halaman=mahasiswahapus&id=<?php echo $row['id'] ?>" class="btn btn-danger m-1">Hapus</a>
                                     </td>
                                 </tr>
                                 <?php $nomor++; ?>

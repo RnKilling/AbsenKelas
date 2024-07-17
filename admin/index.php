@@ -158,12 +158,12 @@ function getBulan($bln)
                                 include 'mahasiswadaftar.php';
                             } elseif ($_GET['halaman'] == "mahasiswatambah") {
                                 include 'mahasiswatambah.php';
-                            } elseif ($_GET['halaman'] == "pegawaiedit") {
-                                include 'pegawaiedit.php';
+                            } elseif ($_GET['halaman'] == "mahasiswaedit") {
+                                include 'mahasiswaedit.php';
                             } elseif ($_GET['halaman'] == "mahasiswadetail") {
                                 include 'mahasiswadetail.php';
-                            } elseif ($_GET['halaman'] == "pegawaihapus") {
-                                include 'pegawaihapus.php';
+                            } elseif ($_GET['halaman'] == "mahasiswahapus") {
+                                include 'mahasiswahapus.php';
                             } elseif ($_GET['halaman'] == "logout") {
                                 include 'logout.php';
                             } elseif ($_GET['halaman'] == "absensirekap") {
