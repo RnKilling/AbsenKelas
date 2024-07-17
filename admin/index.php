@@ -123,12 +123,7 @@ function getBulan($bln)
                     <i class="fa fa-fw fa-list text-white"></i>
                     <span>Laporan</span></a>
             </li>
-            <hr class="sidebar-divider">
-            <li class="nav-item">
-                <a class="nav-link collapsed text-white" href="index.php?halaman=QRpegawai">
-                    <i class="fa fa-fw fa-list text-white"></i>
-                    <span>QR Mahasiswa</span></a>
-            </li>
+
         </ul>
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
