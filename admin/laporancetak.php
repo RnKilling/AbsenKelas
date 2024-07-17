@@ -105,9 +105,9 @@ function bulan($bln)
                 <img src="../foto/logo.png" width="100px">
             </td>
             <td style="padding-left: 25px;">
-                <font size="4"><b>KELURAHAN SEKIP KECAMATAN MEDAN PETISAH</b></font>
+                <font size="4"><b>ABSENSI KELAS</b></font>
                 <br>
-                <span>Kecamatan Medan Petisah, Medan, Sumatera Utara, Indonesia</span>
+                <span>POLITEKNIK GAJAH TUNGGAL,TANGERANG,BANTEN, INDONESIA</span>
             </td>
         </tr>
     </table>
