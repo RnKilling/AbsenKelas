@@ -108,7 +108,7 @@ echo '<img src="' . $filename . '" />';
         echo "<h4>QR Code:</h4>";
         echo "<img src='$tempDir$nip.png' alt='QR Code'>";
 
-        echo "<script>alert('Pegawai Berhasil Di Simpan');</script>";
+        echo "<script>alert('Mahasiswa Berhasil Di Simpan');</script>";
         echo "<script>location='index.php?halaman=mahasiswadaftar';</script>";
     }
 }
