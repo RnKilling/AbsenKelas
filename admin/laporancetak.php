@@ -182,7 +182,7 @@ function bulan($bln)
             <td align="center" style="padding-left:450px">
                 <?= tanggal(date('Y-m-d')) ?>
                 <br><br><br><br><br>
-                Kepala Desa
+                MAHASISWA
                 <br>
                 POLITEKNIK GAJAH TUNGGAL
             </td>
