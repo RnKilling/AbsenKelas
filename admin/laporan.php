@@ -20,11 +20,11 @@ if (!empty($_POST['idpengguna'])) {
 					<div class="row">
 						<div class="col-md-3">
 							<div class="form-group">
-								<label>Pilih Pegawai</label>
+								<label>Pilih Mahasiswa</label>
 								<select name="idpengguna" class="form-control" required>
-									<option value="">Pilih Pegawai</option>
+									<option value="">Pilih Mahasiswa</option>
 									<?php
-									$ambilpegawai = $koneksi->query("SELECT * FROM pengguna where level='Pegawai'");
+									$ambilpegawai = $koneksi->query("SELECT * FROM pengguna where level='Mahasiswa'");
 									while ($pegawai = $ambilpegawai->fetch_assoc()) { ?>
 										<option <?php if ($idpegawai == $pegawai['id']) echo 'selected'; ?> value="<?= $pegawai['id'] ?>"><?= $pegawai['nama'] ?></option>
 									<?php } ?>
