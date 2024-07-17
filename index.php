@@ -9,7 +9,7 @@ include 'koneksi.php';
     <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="w-100" src="assets_home/home/img/bg.jpg" alt="Image">
+                <img class="w-100" src="Poltek_GT.png" alt="Image">
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row justify-content-center">
@@ -30,7 +30,7 @@ include 'koneksi.php';
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="w-100" src="assets_home/home/img/bg.jpg" alt="Image">
+                <img class="w-100" src="Poltek_GT.png" alt="Image">
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row justify-content-center">
@@ -90,7 +90,7 @@ if (isset($_SESSION["pegawai"])) {
                                     <h3 class="text-center text-success mt-3">Sudah Absen</h3>
                                 <?php } else { ?>
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#masuk">
-                                        <img src="foto/masuk.webp" width="100%">
+                                        <img src="Masuk.png" width="100%">
                                         <h3 class="text-center mt-3">Absen Masuk</h3>
                                     </a>
                                 <?php } ?>
@@ -133,7 +133,7 @@ if (isset($_SESSION["pegawai"])) {
                                     <h3 class="text-center text-success mt-3">Sudah Absen</h3>
                                 <?php } else { ?>
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#pulang">
-                                        <img src="foto/keluar.jpg" width="100%">
+                                        <img src="Keluar.png" width="100%">
                                         <h3 class="text-center mt-3">Absen Pulang</h3>
                                     </a>
                                 <?php } ?>
