@@ -90,7 +90,7 @@ if (isset($_SESSION["pegawai"])) {
                                     <h3 class="text-center text-success mt-3">Sudah Absen</h3>
                                 <?php } else { ?>
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#masuk">
-                                        <img src="foto/masuk.webp" width="100%">
+                                        <img src="Masuk.png" width="100%">
                                         <h3 class="text-center mt-3">Absen Masuk</h3>
                                     </a>
                                 <?php } ?>
@@ -133,7 +133,7 @@ if (isset($_SESSION["pegawai"])) {
                                     <h3 class="text-center text-success mt-3">Sudah Absen</h3>
                                 <?php } else { ?>
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#pulang">
-                                        <img src="foto/keluar.jpg" width="100%">
+                                        <img src="Keluar.png" width="100%">
                                         <h3 class="text-center mt-3">Absen Pulang</h3>
                                     </a>
                                 <?php } ?>
