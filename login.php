@@ -53,6 +53,8 @@ if (isset($_POST["simpan"])) {
 			echo "<script> alert('Anda sukses login');</script>";
 			echo "<script> location ='admin/index.php';</script>";
 		}
+	} else {
+		echo "<script> alert('Password atau email anda salah!');</script>";
 	}
 }
 ?>
