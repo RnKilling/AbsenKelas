@@ -5,7 +5,7 @@ $jumlahpegawai = $pegawai->num_rows;
 <div class="row ">
     <div class="col-md-12">
         <center>
-            <img src="../foto/welcome.png" width="70%" height="350px">
+            <img src="Poltek_GT.png" width="70%" height="350px">
         </center>
     </div>
 </div>
