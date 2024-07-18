@@ -131,7 +131,7 @@ function bulan($bln)
             <tr>
                 <th scope="col" width="50px">No</th>
                 <th scope="col">NIM</th>
-                <th scope="col">Pegawai</th>
+                <th scope="col">Mahasiswa</th>
                 <th scope="col">Absen Masuk</th>
                 <th scope="col">Absen Keluar</th>
                 <th scope="col">Status</th>
