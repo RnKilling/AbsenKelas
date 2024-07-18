@@ -11,7 +11,7 @@ if (!empty($_GET['idpengguna'])) {
         <div class="col-md-9 my-auto">
             <div class="form-group">
                 <select name="idpengguna" class="form-control" required>
-                    <option value="">Pilih Pegawai</option>
+                    <option value="">Pilih Mahasiswas</option>
                     <?php
                     $ambilpegawai = $koneksi->query("SELECT * FROM pengguna where level='Pegawai'");
                     while ($pegawai = $ambilpegawai->fetch_assoc()) { ?>
