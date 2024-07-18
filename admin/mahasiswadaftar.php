@@ -46,13 +46,16 @@
                                     <td><?php echo $row['email'] ?></td>
                                     <td><?php echo $row['telepon'] ?></td>
                                     <td>
-                                        <img src="photo_siswa/<?php echo $row['fotoprofil'] ?>" style="border-radius:10%; max-width: 150px;" width="100%">
-                                        <form method="post" enctype="multipart/form-data">
-                                            <input type="file" name="foto" class="form-control">
-                                            <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                            <button type="submit" name="upload" class="btn btn-success mt-2">Upload</button>
-                                        </form>
-                                    </td>
+    <?php
+    $foto = "photo_siswa/" . $row['nip'] . ".png"; // Path foto berdasarkan NIP
+    if (file_exists($foto)) {
+        echo '<img src="' . $foto . '" style="border-radius:10%; max-width: 150px;" width="100%">';
+    } else {
+        echo 'Foto tidak tersedia';
+    }
+    ?>
+</td>
+
                                     <td>
                                         <img src="QRpegawai.php/<?php echo $row['nip']; ?>.png" style="max-width: 100px;" width="100%">
                                     </td>
@@ -75,19 +78,17 @@
 <?php
 if (isset($_POST['upload'])) {
     $id = $_POST['id'];
-    $namafoto = $_FILES['foto']['name'];
-    $lokasifoto = $_FILES['foto']['tmp_name'];
+    $nip = $koneksi->real_escape_string($_POST['nip']);
 
-    if (!empty($lokasifoto)) {
-        move_uploaded_file($lokasifoto, "photo_siswa/" . $namafoto);
-
-        $koneksi->query("UPDATE pengguna SET fotoprofil='$namafoto' WHERE id='$id'") or die(mysqli_error($koneksi));
-
-        echo "<script>alert('Foto berhasil diupload');</script>";
+    $foto = "photo_siswa/" . $nip . ".png"; // Path foto berdasarkan NIP
+    if (file_exists($foto)) {
+        $koneksi->query("UPDATE pengguna SET fotoprofil='$nip.jpg' WHERE id='$id'") or die(mysqli_error($koneksi));
+        echo "<script>alert('Foto berhasil diupdate');</script>";
         echo "<script>location='index.php';</script>";
         exit; // tambahkan exit untuk menghentikan eksekusi script setelah redirect
     } else {
-        echo "<script>alert('Gagal mengupload foto');</script>";
+        echo "<script>alert('Foto tidak ditemukan untuk diupdate');</script>";
     }
 }
+
 ?>
