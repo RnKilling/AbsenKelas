@@ -86,7 +86,7 @@ if (isset($_POST['upload'])) {
         $koneksi->query("UPDATE pengguna SET fotoprofil='$namafoto' WHERE id='$id'") or die(mysqli_error($koneksi));
 
         echo "<script>alert('Foto berhasil diupload');</script>";
-        echo "<script>location='#';</script>";
+        echo "<script>location='index.php';</script>";
         exit; // tambahkan exit untuk menghentikan eksekusi script setelah redirect
     } else {
         echo "<script>alert('Gagal mengupload foto');</script>";
