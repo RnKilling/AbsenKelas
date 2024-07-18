@@ -67,9 +67,9 @@ function getBulan($bln)
 
 <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/x-icon" href="../foto/logo.png">
+    <link rel="icon" type="image/x-icon" href="Poltek_GT.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin - E - Absensi Kelas Politeknik Gajah Tunggal</title>
+    <title>Admin -E- Absensi Kelas Politeknik Gajah Tunggal</title>
     <link href="assets/css/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="assets/DataTables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
@@ -123,6 +123,13 @@ function getBulan($bln)
                     <i class="fa fa-fw fa-list text-white"></i>
                     <span>Laporan</span></a>
             </li>
+            <hr class="sidebar-divider">
+            <li class="nav-item">
+                <a class="nav-link collapsed text-white" href="QRdetail.php">
+                    <i class="fa fa-fw fa-list text-white"></i>
+                    <span>QR Detail</span></a>
+            </li>
+
 
         </ul>
         <div id="content-wrapper" class="d-flex flex-column">
@@ -174,6 +181,9 @@ function getBulan($bln)
                                 include 'profiledit.php';
                             } elseif ($_GET['halaman'] == "laporan") {
                                 include 'laporan.php';
+                            }
+                             elseif ($_GET['halaman'] == "QRdetail") {
+                                include 'QRdetail.php';
                             }
                         } else {
                             include 'beranda.php';
