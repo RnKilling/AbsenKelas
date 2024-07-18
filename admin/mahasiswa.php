@@ -26,8 +26,8 @@ $row = $ambil->fetch_assoc();
     <div class="form-group">
         <label>Jabatan</label>
         <select type="jabatan" class="form-control" name="jabatan">
-            <option <?php if ($row['jabatan'] == 'Pegawai') echo 'selected'; ?> value="Pegawai">Pegawai</option>
-            <option <?php if ($row['jabatan'] == 'Teknisi') echo 'selected'; ?> value="Teknisi">Teknisi</option>
+            <option <?php if ($row['jabatan'] == 'Pegawai') echo 'selected'; ?> value="Pegawai">Mahasiswa</option>
+            <option <?php if ($row['jabatan'] == 'Teknisi') echo 'selected'; ?> value="Teknisi">Mahasiswa/option>
             <option <?php if ($row['jabatan'] == 'HRD') echo 'selected'; ?> value="HRD">HRD</option>
         </select>
     </div>

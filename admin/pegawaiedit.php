@@ -4,7 +4,7 @@ if ($_SESSION['admin']['level'] != "Admin") {
     echo "<script> location ='index.php';</script>";
 }
 ?>
-<h3>Edit Pegawai</h3>
+<h3>Edit Mahasiswa</h3>
 <br>
 <?php
 $id = addslashes($_GET['id']);
