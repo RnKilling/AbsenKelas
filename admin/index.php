@@ -88,7 +88,7 @@ function getBulan($bln)
         }
         ?>
         <ul class="navbar-nav <?= $warna ?> sidebar sidebar-dark accordion" id="accordionSidebar">
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
                 <div class="sidebar-brand-text mx-3 mt-3">E-Absensi</sup></div>
             </a>
             <br>
