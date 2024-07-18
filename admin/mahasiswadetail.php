@@ -91,7 +91,7 @@ $row = $ambil->fetch_assoc();
                                     :
                                 </td>
                                 <td>
-                                    <img src="../foto/<?php echo $row['fotoprofil'] ?>" style="border-radius:10%" width="150px">
+                                    <img src="photo_siswa/<?php echo $row['fotoprofil'] ?>" style="border-radius:10%" width="150px">
                                 </td>
                             </tr>
 
