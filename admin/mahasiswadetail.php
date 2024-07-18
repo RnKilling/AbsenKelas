@@ -52,7 +52,7 @@ $row = $ambil->fetch_assoc();
                             </tr>
                             <tr>
                                 <td>
-                                    Jabatan
+                                    Tingkat
                                 </td>
                                 <td>
                                     :
