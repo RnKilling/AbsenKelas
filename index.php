@@ -91,14 +91,14 @@ if (isset($_SESSION["pegawai"])) {
                                 <?php } else { ?>
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#masuk">
                                         <img src="Masuk.png" width="100%">
-                                        <h3 class="text-center mt-3">Absen Masuk</h3>
+                                        <h3 class="text-center mt-3">Absensi Masuk</h3>
                                     </a>
                                 <?php } ?>
                                 <div class="modal fade" id="masuk" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" style="z-index: 99999;">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Absen Masuk</h5>
+                                                <h5 class="modal-title" id="exampleModalLabel">Absensi Masuk</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <form method="post" action="simpanabsen.php" enctype="multipart/form-data">
