@@ -1,6 +1,6 @@
 <html>
-<title>Laporan Absensi - KELURAHAN SEKIP KECAMATAN MEDAN PETISAH</title>
-<link rel="icon" type="image/x-icon" href="../foto/logo.png">
+<title>Laporan Absensi - POLTEK GT</title>
+<link rel="icon" type="image/x-icon" href="Poltek_GT.png">
 <style type="text/css">
     body {
         -webkit-print-color-adjust: exact;
@@ -102,7 +102,7 @@ function bulan($bln)
     <table>
         <tr>
             <td align="left" style="align-items: left!important;">
-                <img src="../foto/logo.png" width="100px">
+                <img src="Poltek_GT.png" width="100px">
             </td>
             <td style="padding-left: 25px;">
                 <font size="4"><b>ABSENSI KELAS</b></font>
