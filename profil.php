@@ -26,20 +26,31 @@ $row = $ambil->fetch_assoc(); ?>
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="position-relative overflow-hidden h-100" style="min-height: 400px;">
-                    <img src="foto/<?php echo $row['fotoprofil'] ?>" width="100%" style="border-radius:10px;">
+                    <img src="photo_siswa/<?php echo $row['fotoprofil'] ?>" width="100%" style="border-radius:10px;">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="h-100">
                     <form method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label>NIP</label>
+                            <label>NIM
+                            </label>
                             <input value="<?php echo $row['nip']; ?>" type="text" class="form-control" name="nip" readonly>
                         </div>
                         <br>
                         <div class="form-group">
-                            <label>Jabatan</label>
-                            <input value="<?php echo $row['jabatan']; ?>" type="text" class="form-control jabatan" name="jabatan" readonly>
+                            <label>Tingkat</label>
+                            <input value="<?php 
+$jabatan = $row['jabatan'];
+if ($jabatan == 'Pegawai') {
+    echo 'I';
+} elseif ($jabatan == 'Teknisi') {
+    echo 'II';
+} elseif ($jabatan == 'HRD') {
+    echo 'III';
+} else {
+    echo '-';
+} ?>" type="text" class="form-control jabatan" name="jabatan" readonly>
                         </div>
                         <br>
                         <div class="form-group">
