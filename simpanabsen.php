@@ -25,7 +25,7 @@ if (isset($_POST['masuk'])) {
     $filename = uniqid() . '.jpg';
 
     // Specify the path to save the image
-    $filepath = 'foto/' . $filename;
+    $filepath = 'admin/fotomasuk/' . $filename;
 
     // Save the image file
     file_put_contents($filepath, $imageData);
@@ -70,7 +70,7 @@ if (isset($_POST['pulang'])) {
     $filename = uniqid() . '.jpg';
 
     // Specify the path to save the image
-    $filepath = 'foto/' . $filename;
+    $filepath = 'admin/fotopulang/' . $filename;
 
     // Save the image file
     file_put_contents($filepath, $imageData);
