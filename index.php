@@ -35,7 +35,7 @@ include 'koneksi.php';
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-7 pt-5">
-                                <h1 class="display-4 text-white mb-3 animated slideInDown">Absen Kelas</h1>
+                                <h1 class="display-4 text-white mb-3 animated slideInDown">Absensi Kelas</h1>
                                 <?php
                                 if (!isset($_SESSION["pegawai"])) { ?>
                                     <a class="btn btn-primary py-2 px-3 animated slideInDown" href="login.php">
