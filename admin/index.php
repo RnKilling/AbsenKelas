@@ -123,13 +123,6 @@ function getBulan($bln)
                     <i class="fa fa-fw fa-list text-white"></i>
                     <span>Laporan</span></a>
             </li>
-            <hr class="sidebar-divider">
-            <li class="nav-item">
-                <a class="nav-link collapsed text-white" href="QRdetail.php">
-                    <i class="fa fa-fw fa-list text-white"></i>
-                    <span>QR Detail</span></a>
-            </li>
-
 
         </ul>
         <div id="content-wrapper" class="d-flex flex-column">
