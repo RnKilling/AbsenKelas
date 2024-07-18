@@ -13,7 +13,7 @@ $row = $ambil->fetch_assoc();
 ?>
 <form method="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label>NIP</label>
+        <label>NIM</label>
         <input value="<?php echo htmlspecialchars($row['nip']); ?>" type="number" class="form-control" name="nip">
     </div>
     <div class="form-group">
