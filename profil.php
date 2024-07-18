@@ -26,7 +26,7 @@ $row = $ambil->fetch_assoc(); ?>
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="position-relative overflow-hidden h-100" style="min-height: 400px;">
-                    <img src="photo_siswa/<?php echo $row['fotoprofil'] ?>" width="100%" style="border-radius:10px;">
+                    <img src="admin/photo_siswa/<?php echo $row['fotoprofil'] ?>" width="100%" style="border-radius:10px;">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
