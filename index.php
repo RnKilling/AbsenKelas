@@ -9,7 +9,7 @@ include 'koneksi.php';
 	<div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img class="w-100" src="assets_home/home/img/bg.jpg" alt="Image">
+				<img class="w-100" src="Poltek_GT.png" alt="Image">
 				<div class="carousel-caption">
 					<div class="container">
 						<div class="row justify-content-center">
@@ -31,7 +31,7 @@ include 'koneksi.php';
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img class="w-100" src="assets_home/home/img/bg.jpg" alt="Image">
+				<img class="w-100" src="Poltek_GT.png" alt="Image">
 				<div class="carousel-caption">
 					<div class="container">
 						<div class="row justify-content-center">
