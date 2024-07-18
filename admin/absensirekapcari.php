@@ -38,7 +38,7 @@ if (!empty($_GET['idpengguna'])) {
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-body">
-                                <img id="modalImage" src="" alt="" width="100%">
+                                <img id="#" src="" alt="" width="100%">
                             </div>
                         </div>
                     </div>
