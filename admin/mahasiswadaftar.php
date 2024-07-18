@@ -16,7 +16,6 @@
                                 <th>Tingkat</th>
                                 <th>Email</th>
                                 <th>Telepon</th>
-                                <th>Level</th>
                                 <th>Foto</th>
                                 <th>QR Code</th>
                                 <th>Aksi</th>
@@ -46,7 +45,6 @@
                                     </td>
                                     <td><?php echo $row['email'] ?></td>
                                     <td><?php echo $row['telepon'] ?></td>
-                                    <td><?php echo $row['level'] ?></td>
                                     <td>
                                         <img src="photo_siswa/<?php echo $row['fotoprofil'] ?>" style="border-radius:10%; max-width: 150px;" width="100%">
                                         <form method="post" enctype="multipart/form-data">
