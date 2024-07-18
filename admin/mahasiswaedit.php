@@ -4,7 +4,7 @@ if ($_SESSION['admin']['level'] != "Admin") {
     echo "<script> location ='index.php';</script>";
 }
 ?>
-<h3>Edit Pegawai</h3>
+<h3>Edit Mahasiswa</h3>
 <br>
 <?php
 $ambil = $koneksi->query("SELECT * FROM pengguna WHERE id='$_GET[id]'");
