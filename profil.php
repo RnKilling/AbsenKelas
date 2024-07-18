@@ -67,9 +67,7 @@ $row = $ambil->fetch_assoc(); ?>
                         <div class="form-group">
                             <label>Alamat</label>
                             <textarea value="<?php echo $row['alamat']; ?>" class="form-control" name="alamat" id="alamat" rows="10"><?php echo $row['alamat']; ?></textarea>
-                            <script>
-                                CKEDITOR.replace('alamat');
-                            </script>
+
                         </div>
                         <br>
                         <div class="form-group">
