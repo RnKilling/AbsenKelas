@@ -24,7 +24,7 @@ if (!empty($_POST['idpengguna'])) {
 								<select name="idpengguna" class="form-control" required>
 									<option value="">Pilih Mahasiswa</option>
 									<?php
-									$ambilpegawai = $koneksi->query("SELECT * FROM pengguna where level='Mahasiswa'");
+									$ambilpegawai = $koneksi->query("SELECT * FROM pengguna where level='pegawai'");
 									while ($pegawai = $ambilpegawai->fetch_assoc()) { ?>
 										<option <?php if ($idpegawai == $pegawai['id']) echo 'selected'; ?> value="<?= $pegawai['id'] ?>"><?= $pegawai['nama'] ?></option>
 									<?php } ?>
