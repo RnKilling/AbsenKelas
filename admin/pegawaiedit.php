@@ -4,14 +4,14 @@ if ($_SESSION['admin']['level'] != "Admin") {
     echo "<script> location ='index.php';</script>";
 }
 ?>
-<h3>Edit Mahasiswa</h3>
+<h3 class="text-center">Edit Mahasiswa</h3>
 <br>
 <?php
 $id = addslashes($_GET['id']);
 $ambil = $koneksi->query("SELECT * FROM pengguna WHERE id='$id'");
 $row = $ambil->fetch_assoc();
 ?>
-<form method="post" enctype="multipart/form-data">
+<form method="post" enctype="multipart/form-data" class="container">
     <div class="form-group">
         <label>NIM</label>
         <input value="<?php echo htmlspecialchars($row['nip']); ?>" type="number" class="form-control" name="nip">
@@ -26,7 +26,7 @@ $row = $ambil->fetch_assoc();
     </div>
     <div class="form-group">
         <label>Tingkat</label>
-        <select type="jabatan" class="form-control" name="jabatan">
+        <select class="form-control" name="jabatan">
             <option <?php if ($row['jabatan'] == 'Pegawai') echo 'selected'; ?> value="Pegawai">Mahasiswa</option>
             <option <?php if ($row['jabatan'] == 'Teknisi') echo 'selected'; ?> value="Teknisi">Mahasiswa</option>
             <option <?php if ($row['jabatan'] == 'HRD') echo 'selected'; ?> value="HRD">dosen pengampu</option>
@@ -54,7 +54,7 @@ $row = $ambil->fetch_assoc();
             <input type="file" class="form-control" name="foto">
         </div>
     </div>
-    <button class="btn btn-primary" name="ubah"><i class="glyphicon glyphicon-saved"></i>Simpan</a></button>
+    <button class="btn btn-primary btn-block" name="ubah"><i class="glyphicon glyphicon-saved"></i> Simpan</button>
 </form>
 <br><br>
 <?php
