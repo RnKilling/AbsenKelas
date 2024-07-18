@@ -48,10 +48,15 @@
                                     <td><?php echo $row['telepon'] ?></td>
                                     <td><?php echo $row['level'] ?></td>
                                     <td>
-                                        <img src="../foto/<?php echo $row['fotoprofil'] ?>" style="border-radius:10%" width="150px">
+                                        <img src="photo_siswa/<?php echo $row['fotoprofil'] ?>" style="border-radius:10%; max-width: 150px;" width="100%">
+                                        <form method="post" enctype="multipart/form-data">
+                                            <input type="file" name="foto" class="form-control">
+                                            <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+                                            <button type="submit" name="upload" class="btn btn-success mt-2">Upload</button>
+                                        </form>
                                     </td>
                                     <td>
-                                        <img src="QRpegawai.php/<?php echo $row['nip']; ?>.png" width="100px"> <!-- Tampilkan QR Code -->
+                                        <img src="QRpegawai.php/<?php echo $row['nip']; ?>.png" style="max-width: 100px;" width="100%">
                                     </td>
                                     <td>
                                         <a href="index.php?halaman=mahasiswadetail&id=<?php echo $row['id']; ?>" class="btn btn-info m-1">Detail</a>
@@ -68,3 +73,23 @@
         </div>
     </div>
 </div>
+
+<?php
+if (isset($_POST['upload'])) {
+    $id = $_POST['id'];
+    $namafoto = $_FILES['foto']['name'];
+    $lokasifoto = $_FILES['foto']['tmp_name'];
+
+    if (!empty($lokasifoto)) {
+        move_uploaded_file($lokasifoto, "photo_siswa/" . $namafoto);
+
+        $koneksi->query("UPDATE pengguna SET fotoprofil='$namafoto' WHERE id='$id'") or die(mysqli_error($koneksi));
+
+        echo "<script>alert('Foto berhasil diupload');</script>";
+        echo "<script>location='#';</script>";
+        exit; // tambahkan exit untuk menghentikan eksekusi script setelah redirect
+    } else {
+        echo "<script>alert('Gagal mengupload foto');</script>";
+    }
+}
+?>
