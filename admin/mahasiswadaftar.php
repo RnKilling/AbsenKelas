@@ -46,22 +46,24 @@
                                     <td><?php echo $row['email'] ?></td>
                                     <td><?php echo $row['telepon'] ?></td>
                                     <td>
-    <?php
-    $foto = "photo_siswa/" . $row['nip'] . ".png"; // Path foto berdasarkan NIP
-    if (file_exists($foto)) {
-        echo '<img src="' . $foto . '" style="border-radius:10%; max-width: 150px;" width="100%">';
-    } else {
-        echo 'Foto tidak tersedia';
-    }
-    ?>
-</td>
+                                     <?php
+                                      $foto = "photo_siswa/" . $row['nip'] . ".png"; // Path foto berdasarkan NIP
+                                      if (file_exists($foto)) {
+                                    echo '<img src="' . $foto . '" style="border-radius:10%; max-width: 150px;" width="100%">';
+                                        } else {
+                                    echo 'Foto tidak tersedia';
+                                     }
+                                     ?>
+                                    </td>
 
                                     <td>
+                                    <a href="QRdetail.php?nip=<?php echo $row['nip']; ?>" target="_blank">
                                         <img src="QRpegawai.php/<?php echo $row['nip']; ?>.png" style="max-width: 100px;" width="100%">
+
                                     </td>
                                     <td>
                                         <a href="index.php?halaman=mahasiswadetail&id=<?php echo $row['id']; ?>" class="btn btn-info m-1">Detail</a>
-                                        <a href="index.php?halaman=mahasiswaedit&id=<?php echo $row['id']; ?>" class="btn btn-warning m-1">Ubah</a>
+                                        <a href="index.php?halaman=mahasiswaedit&id=<?php echo $row['id']; ?>" class="btn btn-warning m-1">Edit</a>
                                         <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini ?');" href="index.php?halaman=mahasiswahapus&id=<?php echo $row['id'] ?>" class="btn btn-danger m-1">Hapus</a>
                                     </td>
                                 </tr>
